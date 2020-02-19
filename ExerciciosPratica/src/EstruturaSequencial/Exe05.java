@@ -1,4 +1,5 @@
 package EstruturaSequencial;
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class Exe05 {
@@ -7,6 +8,7 @@ public class Exe05 {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
+		DecimalFormat df = new DecimalFormat("0.00");
 		double metros, cms;
 		
 		System.out.print("Digite o valor de metros: ");
@@ -14,7 +16,7 @@ public class Exe05 {
 		
 		cms = metros * 100;
 		
-		System.out.println(metros + " metros é igual a " + cms + " centímetros.");
+		System.out.println(df.format(metros) + " metros é igual a " + df.format(cms) + " centímetros.");
 		input.close();
 	}
 }
